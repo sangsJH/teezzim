@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<title> 브릿지 테스트 </title>
+
+
+<input type="button" value="Say hello" onClick="CallAndroid()" />
+<br>
+<input type="button" value="Go Gallery" onClick="Gallery()" />
+<br>
+<input type="button" value="나의 예약" onClick="Get_data()" />
+
+<script type="text/javascript">
+    function CallAndroid() {
+        BRIDGE.CallAndroid();
+    }
+
+    function Gallery() {
+        BRIDGE.Gallery();
+    }
+
+    function Get_data() {
+        var st_temp = '{ "date": "03/27", "time": "06:30", "location": "평택", "meno": "", "cansel": "0", "canselday": "", "album": "", "scorePhoto": ""}'
+        BRIDGE.Get_data(st_temp);
+    }
+
+
+</script>
+
+</body>
+
+</html> 
